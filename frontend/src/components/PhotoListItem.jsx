@@ -16,10 +16,10 @@ const sampleDataForPhotoListItem = {
 
 const PhotoListItem = (props) => {
 
-  const { id, location, imageSource, username, profile } = props.sampleDataForPhotoListItem;
+  const { location, imageSource, username, profile } = props.photoItem;
 
   return (
-    <article className="photo-list__item" key={id}>
+    <li className="photo-list__item">
       <img src={imageSource} className="photo-list__image"></img>
       <div className="photo-list__user-details">
         <img src={profile} className="photo-list__user-profile"></img>
@@ -30,7 +30,7 @@ const PhotoListItem = (props) => {
           </span>
         </div>
       </div>
-    </article>
+    </li>
   );
   
 };
