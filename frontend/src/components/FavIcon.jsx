@@ -2,17 +2,6 @@ import React from "react";
 
 const FavIcon = ({ displayAlert, like, likePhoto }) => {
   
-  // const [like, setLike] = useState(fixedLike || false);
-
-  // const likePhoto = () => {
-  //   if (like) {
-  //     setLike(false);
-  //   } else {
-  //     setLike(true);
-  //   }
-  //   console.log(like);
-  // };
-  
   return (
     <svg
       width="20"
