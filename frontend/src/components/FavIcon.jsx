@@ -6,7 +6,7 @@ const FavIcon = ({ displayAlert, like, likePhoto }) => {
     <svg
       width="24"
       height="22"
-      viewBox="0 0 24 19"
+      viewBox="0 0 25 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       onClick={likePhoto}
@@ -21,10 +21,11 @@ const FavIcon = ({ displayAlert, like, likePhoto }) => {
       />
       {!!displayAlert && (
         <circle
-          cx="21"
-          cy="4" r="2.75"
-          fill="#FFFF00"
-          stroke="#C80000"
+          cx="20"
+          cy="5"
+          r="5"
+          fill="#30E94C"
+          stroke="none"
           strokeWidth="0.5"
         />
       )}
