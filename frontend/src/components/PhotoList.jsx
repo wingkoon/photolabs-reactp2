@@ -7,13 +7,14 @@ import "../styles/PhotoList.scss";
 const PhotoList = (props) => {
   
   const photoList = photos.map((photo) => {
-    const {id, location, urls, user} = photo;
+    const { id, location, urls, user, similarPhotos } = photo;
     const photoObj = {
       location,
       imageSource: urls.regular,
       username: user.name,
       profile: user.profile,
-      id
+      id,
+      similarPhotos
     };
     return (
       <PhotoListItem
@@ -21,7 +22,7 @@ const PhotoList = (props) => {
         key={id}
         like={props.like}
         likePhoto={props.likePhoto}
-        isClicked={props.isClicked}
+        isClicked={() => props.isClicked(urls.regular, similarPhotos)}
       />
     );
   });
