@@ -1,4 +1,7 @@
 .photo-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-;
   margin: 24px;
   padding: 8px;
   border-width: 0.5px;
@@ -34,9 +37,13 @@
 
 .photo-list__user-details {
   display: flex;
+  flex-direction: row;
+  margin-top: 5px;
 }
 
 .photo-list__user-info {
+  display: flex;
+  flex-direction: column;
   margin-top: 5px;
   font-weight: 700;
   font-size: 12px;
