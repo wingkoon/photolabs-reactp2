@@ -31,7 +31,7 @@ const App = () => {
   return (
     <div className="App">
       <HomeRoute isClicked={isClicked} like={like} likePhoto={likePhoto} />
-      {clicked && <PhotoDetailsModal unClicked={unClicked} modalPhotos={modalPhotos} like={like} likePhoto={likePhoto} /> /* Closes modal*/}
+      {clicked && <PhotoDetailsModal unClicked={unClicked} modalPhotos={modalPhotos} like={like} likePhoto={likePhoto} />}
     </div>
   );
 };

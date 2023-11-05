@@ -1,6 +1,5 @@
 import React from "react";
 import PhotoListItem from "./PhotoListItem";
-// import photos from "../mocks/photos"; // TODO: Consume in App.jsx
 
 import "../styles/PhotoList.scss";
 
@@ -12,11 +11,7 @@ const PhotoList = (props) => {
       id,
       location,
       urls: { regular: urls.regular, full: urls.full },
-      user: { name: user.name, profile: user.profile },
-      // imageSource: urls.regular,
-      // username: user.name,
-      // profile: user.profile,
-      // similarPhotos,
+      user: { name: user.name, profile: user.profile }
     };
     return (
       <PhotoListItem
