@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 
-const FavIcon = ({ displayAlert }) => {
+const FavIcon = ({ displayAlert, fixedLike }) => {
   
-  const [like, setLike] = useState(false);
+  const [like, setLike] = useState(fixedLike || false);
 
   const likePhoto = () => {
     if (like) {
