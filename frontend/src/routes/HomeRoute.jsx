@@ -4,9 +4,9 @@ import PhotoList from 'components/PhotoList';
 
 import '../styles/HomeRoute.scss';
 
-const HomeRoute = () => {
+const HomeRoute = ({ fixedLike }) => {
   
-  const [like, setLike] = useState({});
+  const [like, setLike] = useState({fixedLike});
 
   const likePhoto = (photoId) => {
     setLike((prevLikes) => ({
