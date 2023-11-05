@@ -4,12 +4,22 @@ import FavBadge from "./FavBadge";
 
 import '../styles/TopNavigationBar.scss';
 
-const TopNavigation = () => {
+const TopNavigation = (props) => {
+  
+  let likedPhotoExists = false;
+
+  for (const photoId in props.like) {
+    if (props.like[photoId]) {
+      likedPhotoExists = true;
+      break;
+    }
+  }
+  
   return (
     <div className="top-nav-bar">
       <span className="top-nav-bar__logo">PhotoLabs</span>
       <TopicList />
-      <FavBadge />
+      <FavBadge isFavPhotoExist={likedPhotoExists} />
     </div>
   );
 };
