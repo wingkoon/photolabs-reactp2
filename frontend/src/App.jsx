@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="App">
       <HomeRoute isClicked={isClicked} />
-      {clicked && <PhotoDetailsModal unClicked={unClicked} />}
+      {clicked && <PhotoDetailsModal unClicked={unClicked} /> /* Closes modal*/}
     </div>
   );
 };
