@@ -3,11 +3,11 @@ import FavIcon from './FavIcon';
 
 import '../styles/PhotoFavButton.scss';
 
-const PhotoFavButton = () => {
+const PhotoFavButton = (props) => {
   return (
     <div className="photo-list__fav-icon">
       <div className="photo-list__fav-icon-svg">
-        <FavIcon />
+        <FavIcon like={props.isLiked} likePhoto={() => props.likePhoto(props.photoId)} />
       </div>
     </div>
   );
