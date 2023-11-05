@@ -4,9 +4,9 @@ import PhotoList from 'components/PhotoList';
 
 import '../styles/HomeRoute.scss';
 
-const HomeRoute = ({ fixedLike }) => {
+const HomeRoute = (props) => {
   
-  const [like, setLike] = useState({fixedLike});
+  const [like, setLike] = useState({});
 
   const likePhoto = (photoId) => {
     setLike((prevLikes) => ({
@@ -18,7 +18,7 @@ const HomeRoute = ({ fixedLike }) => {
   return (
     <div className="home-route">
       <TopNavigationBar like={like} />
-      <PhotoList like={like} likePhoto={likePhoto} />
+      <PhotoList like={like} likePhoto={likePhoto} isClicked={props.isClicked} />
     </div>
   );
 };

@@ -21,6 +21,7 @@ const PhotoList = (props) => {
         key={id}
         like={props.like}
         likePhoto={props.likePhoto}
+        isClicked={props.isClicked}
       />
     );
   });
