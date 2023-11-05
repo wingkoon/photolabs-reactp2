@@ -6,21 +6,32 @@ import './App.scss';
 
 const App = () => {
 
-  const [clicked, setClicked] = useState(false);
+  const [ clicked, setClicked ] = useState(false);
+  const [ modalPhotos, setModalPhotos ] = useState({});
+  const [ like, setLike ] = useState({});
 
-  const isClicked = (photoUrl, similarPhotos) => {
+  const isClicked = (photo, similarPhotos) => {
     setClicked(true);
-    console.log(photoUrl, similarPhotos);
+    const similarPhotoObjs = Object.values(similarPhotos);
+    setModalPhotos({ photo, similarPhotos: similarPhotoObjs });
+    console.log(photo, similarPhotos);
   };
 
   const unClicked = () => {
     setClicked(false);
   };
 
+  const likePhoto = (photoId) => {
+    setLike((prevLikes) => ({
+      ...prevLikes,
+      [photoId]: !prevLikes[photoId] || false,
+    }));
+  };
+
   return (
     <div className="App">
-      <HomeRoute isClicked={isClicked} />
-      {clicked && <PhotoDetailsModal unClicked={unClicked} /> /* Closes modal*/}
+      <HomeRoute isClicked={isClicked} like={like} likePhoto={likePhoto} />
+      {clicked && <PhotoDetailsModal unClicked={unClicked} modalPhotos={modalPhotos} like={like} likePhoto={likePhoto} /> /* Closes modal*/}
     </div>
   );
 };
