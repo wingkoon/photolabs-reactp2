@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { useReducer } from "react";
 
 const actionTypes = {
@@ -26,13 +25,8 @@ const likeReducer = (state, action) => {
 const useLike = () => {
 
   const [like, dispatch] = useReducer(likeReducer, {});
-  // const [ like, setLike ] = useState({});
 
   const toggleLike = (photoId) => {
-    // setLike((prevLikes) => ({
-    //   ...prevLikes,
-    //   [photoId] : !prevLikes[photoId] || false,
-    // }));
     if (like[photoId]) {
       dispatch({ type: actionTypes.REMOVE_FAVORITE, photoId });
     } else {

@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { useReducer } from "react";
 
 const ACTIONS = {
@@ -33,13 +32,8 @@ const useModal = () => {
   };
 
   const [state, dispatch] = useReducer(modalReducer, initialState);
-  // const [ clicked, setClicked ] = useState(false);
-  // const [ modalPhotos, setModalPhotos ] = useState({});
 
   const isClicked = (photo, similarPhotos) => {
-    // setClicked(true);
-    // const similarPhotoObjs = Object.values(similarPhotos);
-    // setModalPhotos({ photo, similarPhotos: similarPhotoObjs });
     dispatch({
       type: ACTIONS.OPEN_MODAL,
       photo,
@@ -48,7 +42,6 @@ const useModal = () => {
   };
 
   const unClicked = () => {
-    // setClicked(false);
     dispatch({
       type: ACTIONS.CLOSE_MODAL,
     });
