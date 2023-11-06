@@ -27,10 +27,8 @@ const PhotoDetailsModal = (props) => {
           modal={modal}
         />
       </ul>
-      <div>
-        <div className="photo-details-modal__header">
-          <span>Similar Photos</span>
-        </div>
+      <div className="photo-details-modal__header">
+        <span>Similar Photos</span>
         <PhotoList
           photos={similarPhotos}
           like={props.like}
