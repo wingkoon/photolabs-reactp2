@@ -10,27 +10,6 @@ const App = () => {
 
   const { like, toggleLike } = useLike();
   const { clicked, isClicked, unClicked, modalPhotos } = useModal();
-  // const [ like, setLike ] = useState({});
-  // const [ clicked, setClicked ] = useState(false);
-  // const [ modalPhotos, setModalPhotos ] = useState({});
-
-  // const isClicked = (photo, similarPhotos) => {
-  //   setClicked(true);
-  //   const similarPhotoObjs = Object.values(similarPhotos);
-  //   setModalPhotos({ photo, similarPhotos: similarPhotoObjs });
-  //   console.log(photo, similarPhotos);
-  // };
-
-  // const unClicked = () => {
-  //   setClicked(false);
-  // };
-
-  // const likePhoto = (photoId) => {
-  //   setLike((prevLikes) => ({
-  //     ...prevLikes,
-  //     [photoId]: !prevLikes[photoId] || false,
-  //   }));
-  // };
 
   return (
     <div className="App">
