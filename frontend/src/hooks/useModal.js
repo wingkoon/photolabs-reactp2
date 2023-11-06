@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-const ACTIONS = {
+const actionTypes = {
   OPEN_MODAL: "OPEN_MODAL",
   CLOSE_MODAL: "CLOSE_MODAL",
 };
@@ -8,13 +8,13 @@ const ACTIONS = {
 const modalReducer = (state, action) => {
   let similarPhotoObjs;
   switch (action.type) {
-  case ACTIONS.OPEN_MODAL:
+  case actionTypes.OPEN_MODAL:
     similarPhotoObjs = Object.values(action.similarPhotos);
     return {
       clicked: true,
       modalPhotos: { photo: action.photo, similarPhotos: similarPhotoObjs },
     };
-  case ACTIONS.CLOSE_MODAL:
+  case actionTypes.CLOSE_MODAL:
     return {
       clicked: false,
       modalPhotos: {},
@@ -35,7 +35,7 @@ const useModal = () => {
 
   const isClicked = (photo, similarPhotos) => {
     dispatch({
-      type: ACTIONS.OPEN_MODAL,
+      type: actionTypes.OPEN_MODAL,
       photo,
       similarPhotos,
     });
@@ -43,7 +43,7 @@ const useModal = () => {
 
   const unClicked = () => {
     dispatch({
-      type: ACTIONS.CLOSE_MODAL,
+      type: actionTypes.CLOSE_MODAL,
     });
   };
 

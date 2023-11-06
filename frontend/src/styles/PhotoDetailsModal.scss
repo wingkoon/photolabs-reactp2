@@ -1,5 +1,3 @@
-// TODO: Clean and refactor classes.
-
 .photo-details-modal {
   background-color: white;
   box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.5);
@@ -7,17 +5,10 @@
   top: 55%;
   left: 50%;
   transform: translate(-50%, -40%);
-  height: 80%;
+  height: 80vh;
   width: 55%;
-  overflow-y: scroll;
   border-radius: 12px;
-
-  hr {
-    padding: 0;
-    margin: 0 20px;
-    color: black;
-    width: 95%;
-  }
+  overflow: auto; /* Replace 'overflow-y: scroll' with 'overflow: auto' */
 }
 
 .photo-details-modal__close-button {
@@ -27,7 +18,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   margin-left: 16px;
   margin-top: 16px;
@@ -42,11 +33,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style-type: none;
   margin: 0;
   padding: 0 40px;
-  height: 7cap;
 }
 
 // .photo-details-modal__image {
@@ -96,11 +86,11 @@
 
 .photo-details-modal__photographer-details {
   display: flex;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .photo-details-modal__header {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #1e1e1e;
   margin-top: 24px;
@@ -125,7 +115,7 @@
 .photo-details-modal__photographer-info {
   margin-top: 5px;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-left: 8px;
 }
 
@@ -134,7 +124,10 @@ ul {
 }
 
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 8px;
   padding: 0;
   margin: 0;
+  background-color: transparent;
 }
+
+
