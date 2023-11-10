@@ -1,15 +1,19 @@
 import React from "react";
 import TopNavigationBar from 'components/TopNavigationBar';
 import PhotoList from 'components/PhotoList';
-import photos from "../mocks/photos";
+import useApplicationData from "hooks/useApplicationData";
+// import photos from "../mocks/photos";
 
 import '../styles/HomeRoute.scss';
 
 const HomeRoute = (props) => {
   
+  const { photos, topics } = useApplicationData();
+  console.log(photos);
+
   return (
     <div className="home-route">
-      <TopNavigationBar like={props.like} />
+      <TopNavigationBar topics={topics} like={props.like} />
       <PhotoList photos={photos} like={props.like} likePhoto={props.likePhoto} isClicked={props.isClicked} />
     </div>
   );
