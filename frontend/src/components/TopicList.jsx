@@ -1,6 +1,5 @@
 import React from "react";
 import TopicListItem from "./TopicListItem";
-// import topics from "../mocks/topics"; // TODO: Consume in App.jsx
 
 import "../styles/TopicList.scss";
 

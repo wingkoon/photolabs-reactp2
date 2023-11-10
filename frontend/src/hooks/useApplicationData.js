@@ -8,12 +8,12 @@ const useApplicationData = () => {
   useEffect(() => {
     fetch("/api/photos")
       .then((res) => res.json().then((data) => setPhotos([...data])));
-  }, []); // Rendering once only.
+  }, []);
 
   useEffect(() => {
     fetch("/api/topics")
       .then((res) => res.json().then((data) => setTopics([...data])));
-  }, []); // Rendering once only.
+  }, []);
 
   const getPhotosByTopics = topicId => {
     fetch(`/api/topics/photos/${topicId}`)
