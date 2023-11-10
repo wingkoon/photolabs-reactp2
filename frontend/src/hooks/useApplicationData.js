@@ -15,9 +15,15 @@ const useApplicationData = () => {
       .then((res) => res.json().then((data) => setTopics([...data])));
   }, []); // Rendering once only.
 
+  const getPhotosByTopics = topicId => {
+    fetch(`/api/topics/photos/${topicId}`)
+      .then((res) => res.json().then((data) => setPhotos([...data])));
+  };
+
   return {
     photos,
-    topics
+    topics,
+    getPhotosByTopics
   };
 
 };

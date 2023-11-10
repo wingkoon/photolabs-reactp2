@@ -8,12 +8,12 @@ import '../styles/HomeRoute.scss';
 
 const HomeRoute = (props) => {
   
-  const { photos, topics } = useApplicationData();
+  const { photos, topics, getPhotosByTopics } = useApplicationData();
   console.log(photos);
 
   return (
     <div className="home-route">
-      <TopNavigationBar topics={topics} like={props.like} />
+      <TopNavigationBar topics={topics} like={props.like} getPhotosByTopics={getPhotosByTopics} />
       <PhotoList photos={photos} like={props.like} likePhoto={props.likePhoto} isClicked={props.isClicked} />
     </div>
   );

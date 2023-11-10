@@ -7,7 +7,13 @@ import "../styles/TopicList.scss";
 const TopicList = (props) => {
   
   const topicList = props.topics.map((topic) => {
-    return (<TopicListItem topicTitle={topic.title} key={topic.id} />);
+    return (
+      <TopicListItem
+        topicTitle={topic.title}
+        key={topic.id}
+        getPhotosByTopics={() => props.getPhotosByTopics(topic.id)}
+      />
+    );
   });
 
   return (
