@@ -8,7 +8,6 @@ import '../styles/HomeRoute.scss';
 const HomeRoute = (props) => {
   
   const { photos, topics, getPhotosByTopics } = useApplicationData();
-  console.log(photos);
 
   return (
     <div className="home-route">

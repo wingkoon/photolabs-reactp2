@@ -6,8 +6,8 @@ const actionTypes = {
 };
 
 const modalReducer = (state, action) => {
+  
   let similarPhotoObjs;
-  console.log(action);
   
   switch (action.type) {
   case actionTypes.OPEN_MODAL:
