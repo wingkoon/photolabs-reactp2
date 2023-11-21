@@ -14,11 +14,13 @@ PhotoLabs is a React-based single-page application (SPA) that allows users to vi
 ![similar-photos](docs/similar-photos.png)
 
 ## Features
-- View a collection of photos.
-- Favorite photos.
-- Organize photos by category.
-- Detailed photo viewing modal.
-- Similar photo suggestions in the modal.
+1. A user can view photos from the homepage loaded from the API.
+2. The user can navigate to different photo categories, also called topics.
+3. The user can click on a photo to view a larger version of the photo and relevant / similar photos.
+4. The user can like a photo from anywhere within the application where the photo is displayed.
+5. The user can view a heart icon with a notification in the navigation if there are liked photos.
+6. The navigation will consist of different topics and heart icon.
+7. The client-side application will make API requests to load and persist data (i.e. relevant data is not lost after a session restarts, so after a browser refresh).
 
 ## Tech Stack
 ### Frontend
