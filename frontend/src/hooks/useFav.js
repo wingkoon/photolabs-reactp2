@@ -4,7 +4,7 @@ const actionTypes = {
   TOGGLE_FAVORITE: "TOGGLE_FAVORITE",
 };
 
-const likeReducer = (state, action) => {
+const favReducer = (state, action) => {
   switch (action.type) {
   case actionTypes.TOGGLE_FAVORITE:
     return {
@@ -16,17 +16,17 @@ const likeReducer = (state, action) => {
   }
 };
 
-const useLike = () => {
-  const [like, dispatch] = useReducer(likeReducer, {});
+const useFav = () => {
+  const [fav, dispatch] = useReducer(favReducer, {});
 
-  const toggleLike = (photoId) => {
+  const toggleFav = (photoId) => {
     dispatch({ type: actionTypes.TOGGLE_FAVORITE, photoId });
   };
 
   return {
-    like,
-    toggleLike,
+    fav,
+    toggleFav,
   };
 };
 
-export default useLike;
+export default useFav;

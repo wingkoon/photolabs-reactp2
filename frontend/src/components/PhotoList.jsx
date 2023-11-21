@@ -18,8 +18,8 @@ const PhotoList = (props) => {
       <PhotoListItem
         photoItem={photoObj}
         key={id}
-        like={props.like}
-        likePhoto={props.likePhoto}
+        fav={props.fav}
+        favPhoto={props.favPhoto}
         isClicked={() => props.isClicked(photoObj, similar_photos)}
         modal={props.modal}
       />

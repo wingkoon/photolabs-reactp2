@@ -6,11 +6,11 @@ import '../styles/TopNavigationBar.scss';
 
 const TopNavigation = (props) => {
   
-  let likedPhotoExists = false;
+  let favPhotoExists = false;
 
-  for (const photoId in props.like) {
-    if (props.like[photoId]) {
-      likedPhotoExists = true;
+  for (const photoId in props.fav) {
+    if (props.fav[photoId]) {
+      favPhotoExists = true;
       break;
     }
   }
@@ -19,7 +19,7 @@ const TopNavigation = (props) => {
     <div className="top-nav-bar">
       <span className="top-nav-bar__logo">PhotoLabs</span>
       <TopicList topics={props.topics} getPhotosByTopics={props.getPhotosByTopics} />
-      <FavBadge isFavPhotoExist={likedPhotoExists} />
+      <FavBadge isFavPhotoExist={favPhotoExists} />
     </div>
   );
 };

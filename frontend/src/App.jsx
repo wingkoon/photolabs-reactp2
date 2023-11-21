@@ -1,21 +1,21 @@
 import React from "react";
 import HomeRoute from "routes/HomeRoute";
 import PhotoDetailsModal from "routes/PhotoDetailsModal";
-import useLike from "hooks/useLike";
+import useFav from "hooks/useFav";
 import useModal from "hooks/useModal";
 
 import './App.scss';
 
 const App = () => {
 
-  const { like, toggleLike } = useLike();
+  const { fav, toggleFav } = useFav();
   const { clicked, isClicked, unClicked, modalPhotos } = useModal();
 
   return (
     <div className="App">
-      <HomeRoute isClicked={isClicked} like={like} likePhoto={toggleLike} />
+      <HomeRoute isClicked={isClicked} fav={fav} favPhoto={toggleFav} />
       {clicked && (
-        <PhotoDetailsModal unClicked={unClicked} modalPhotos={modalPhotos} like={like} likePhoto={toggleLike} />
+        <PhotoDetailsModal unClicked={unClicked} modalPhotos={modalPhotos} fav={fav} favPhoto={toggleFav} />
       )}
     </div>
   );

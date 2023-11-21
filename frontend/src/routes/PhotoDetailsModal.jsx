@@ -21,8 +21,8 @@ const PhotoDetailsModal = (props) => {
       <ul className="main-photo">
         <PhotoListItem
           photoItem={photo}
-          like={props.like}
-          likePhoto={props.likePhoto}
+          fav={props.fav}
+          favPhoto={props.favPhoto}
           mainPhoto={true}
           modal={modal}
         />
@@ -31,8 +31,8 @@ const PhotoDetailsModal = (props) => {
         <span>Similar Photos</span>
         <PhotoList
           photos={similarPhotos}
-          like={props.like}
-          likePhoto={props.likePhoto}
+          fav={props.fav}
+          favPhoto={props.favPhoto}
           modal={modal}
           isClicked={() => false}
         />

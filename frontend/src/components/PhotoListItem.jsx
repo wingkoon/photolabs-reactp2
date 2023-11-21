@@ -18,8 +18,8 @@ const PhotoListItem = (props) => {
       }`}
     >
       <PhotoFavButton
-        isLiked={props.like[id] || false}
-        likePhoto={props.likePhoto}
+        isFav={props.fav[id] || false}
+        favPhoto={props.favPhoto}
         photoId={id}
       />
       <img
