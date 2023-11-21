@@ -1,44 +1,32 @@
 import { useReducer } from "react";
 
 const actionTypes = {
-  ADD_FAVORITE: "ADD_FAVORITE",
-  REMOVE_FAVORITE: "REMOVE_FAVORITE",
+  TOGGLE_FAVORITE: "TOGGLE_FAVORITE",
 };
 
 const likeReducer = (state, action) => {
-  let newState;
   switch (action.type) {
-  case actionTypes.ADD_FAVORITE:
+  case actionTypes.TOGGLE_FAVORITE:
     return {
       ...state,
-      [action.photoId]: true,
+      [action.photoId]: !state[action.photoId],
     };
-  case actionTypes.REMOVE_FAVORITE:
-    newState = { ...state };
-    delete newState[action.photoId];
-    return newState;
   default:
     return state;
   }
 };
 
 const useLike = () => {
-
   const [like, dispatch] = useReducer(likeReducer, {});
 
   const toggleLike = (photoId) => {
-    if (like[photoId]) {
-      dispatch({ type: actionTypes.REMOVE_FAVORITE, photoId });
-    } else {
-      dispatch({ type: actionTypes.ADD_FAVORITE, photoId });
-    }
+    dispatch({ type: actionTypes.TOGGLE_FAVORITE, photoId });
   };
 
   return {
     like,
-    toggleLike
+    toggleLike,
   };
-
 };
 
 export default useLike;
