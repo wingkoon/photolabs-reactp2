@@ -1,6 +1,18 @@
 # Photolabs
 PhotoLabs is a React-based single-page application (SPA) that allows users to view and favorite photos.
 
+#### Default landing page.
+![landing-page](docs/landing-page.png)
+
+#### Main viewer when photos are favorited.
+![fav-photos](docs/fav-photos.png)
+
+#### Modal viewer when a photo is clicked.
+![open-modal](docs/open-modal.png)
+
+#### Suggested similar photos in the modal viewer.
+![similar-photos](docs/similar-photos.png)
+
 ## Features
 - View a collection of photos
 - Favorite photos
