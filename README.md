@@ -14,11 +14,11 @@ PhotoLabs is a React-based single-page application (SPA) that allows users to vi
 ![similar-photos](docs/similar-photos.png)
 
 ## Features
-- View a collection of photos
-- Favorite photos
-- Organize photos by category
-- Detailed photo viewing modal
-- Similar photo suggestions in the modal
+- View a collection of photos.
+- Favorite photos.
+- Organize photos by category.
+- Detailed photo viewing modal.
+- Similar photo suggestions in the modal.
 
 ## Tech Stack
 ### Frontend
@@ -45,7 +45,7 @@ cd your-repo-name
 
 3. Install dependencies with `npm install` in each respective `/frontend` and `/backend`.
 ```sh
-  npm install
+npm install
 ```
 
 ## [Frontend] Running Webpack Development Server
