@@ -1,5 +1,5 @@
 # Photolabs
-PhotoLabs is a React-based single-page application (SPA) that allows users to view and favorite photos.
+PhotoLabs is a React-based single-page application (SPA) that allows users to view photos in different contexts. I have used a pre-existing API to build a frontend user experience for users to interact with photos.
 
 #### Default landing page.
 ![landing-page](docs/landing-page.png)
