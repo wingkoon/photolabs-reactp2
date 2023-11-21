@@ -6,15 +6,14 @@ const actionTypes = {
 };
 
 const modalReducer = (state, action) => {
-  
-  let similarPhotoObjs;
-  
   switch (action.type) {
   case actionTypes.OPEN_MODAL:
-    similarPhotoObjs = Object.values(action.similarPhotos);
     return {
       clicked: true,
-      modalPhotos: { photo: action.photo, similarPhotos: similarPhotoObjs },
+      modalPhotos: {
+        photo: action.photo,
+        similarPhotos: Object.values(action.similarPhotos),
+      },
     };
   case actionTypes.CLOSE_MODAL:
     return {
@@ -27,7 +26,6 @@ const modalReducer = (state, action) => {
 };
 
 const useModal = () => {
-
   const initialState = {
     clicked: false,
     modalPhotos: {},
@@ -53,10 +51,8 @@ const useModal = () => {
     clicked: state.clicked,
     modalPhotos: state.modalPhotos,
     isClicked,
-    unClicked
+    unClicked,
   };
-
 };
-
 
 export default useModal;
